@@ -1,0 +1,108 @@
+---
+title: 'Home'
+date: 2026-05-05
+draft: false
+---
+<div style="margin-bottom: 1rem;">
+    <div id="memademay" style="display: none;">
+        <div style="margin-bottom: 1rem; border: 1px solid white; padding: 1rem" id="memademaytext">
+            Happy Me Made May! We wish the sewists of Earth a glorious month of me-mades and applaud all who have helped
+            bolster a culture of home sewing across the world.
+        </div>
+        <script>
+            function ordinal(n) {
+                const s = ["th", "st", "nd", "rd"];
+                const v = n % 100;
+                return n + (s[(v - 20) % 10] || s[v] || s[0]);
+            }
+            if (new Date().getMonth() == 4 /* zero-indexed, remember */) {
+                const mmm = document.getElementById("memademay");
+                mmm.style.display = 'unset';
+                if (new Date().getDate() == 23 /* really, JS? you don't zero-index the date? inconsistency */) {
+                    birthdayNumber = ordinal(new Date().getFullYear() - 1707)
+                    document.getElementById("memademaytext").innerHTML += ` And happy ${birthdayNumber} birthday, <a href="https://en.wikipedia.org/wiki/Carl_Linnaeus">Linnaeus</a>!`
+                }
+            }
+        </script>
+    </div>
+    <div
+        style="background-image: url('/ukayukay.jpg'); background-size: cover; background-position: center; padding: 2rem;">
+        <div style="padding: 0.5rem; background: rgba(0,0,0,0.8); border-radius: 5px;">
+            <p>
+                The
+                <b>First Lemurian Clothing Taxonomy</b>
+                (<b>LCT-01</b>)
+                is a system of garment and fabric classification developed by Lemuria starting in September 2025. It is
+                based on methods first developed for and used in biological taxonomy, such as binomial nomenclature, a
+                tree-like structure, and nomenclatural ranks. In layman's terms: "Latin names, but for dresses!". An
+                example of such a binomial name is <a
+                    href="https://lct01.lemuria.ph/journal/articles/2026/2026.0006_gunnelaurentia_johnsonia.html">
+                    <i>Gunnelaurentia johnsonia</i>
+                </a>
+                for
+                <a href="https://www.instagram.com/p/C9-GM1BgaGX/">
+                    a make of a vintage Gunne Sax pattern
+                </a> by <a href="https://www.instagram.com/justlaurenjohnson">Lauren Johnson</a>.
+            </p>
+            <br>
+            <p>
+                Lemuria began working on the LCT-01 in September 2025, during an abundance of free time, and has worked
+                on
+                it since.
+            </p>
+            <br>
+            <p>
+                The LCT-01 is not intended to replace the current system; but rather coexist. Even though scientists
+                have
+                named it <i>Felis catus</i>, the word "cat" won’t be going away anytime soon. Think of the product name
+                as
+                the common name, and the LCT-01 name as well… the scientific name.
+            </p>
+        </div>
+    </div>
+    <p style="font-size: 85%">Image:
+        <a href="https://commons.wikimedia.org/wiki/File:Ukay_Ukay_Plaza_Miranda,Quiapo,Manila.jpg">Constantine
+            Agustin</a>,
+        <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a>, via Wikimedia Commons
+    </p>
+</div>
+<div style="margin-bottom: 1rem;">
+    <h2>Publications</h2>
+    <span style="font-size: 150%">
+        <i>
+            <a href="/journal">
+                Lemuria's (Informal) Journal of Clothing Taxonomy
+            </a>
+        </i>
+    </span>
+    <p>
+        The oldest and first journal dedicated to the LCT-01. Single author non-peer-reviewed gray literature; and full
+        open-access too. Uses a fair bit of jargon, a glossary is in the works.
+    </p>
+</div>
+<div style="margin-bottom: 1rem;">
+    <h2>Contact</h2>
+    <p>
+        The author may be contacted at <a
+            href='mailto&#58;lem%&#55;5%72ia&#64;%6Cemuri%61&#37;&#50;Ep%&#54;&#56;'>le&#109;uria&#64;lemu&#114;ia&#46;&#112;h</a>.
+        Please include "LCT-01" in your subject line. Sewists with Instagram accounts need not be intimidated by email
+        as the author also operates an Instagram account at <a
+            href="https://instagram.com/lemuriaph">&commat;lemuriaph</a> for sewing research, which has its DMs open.
+    </p>
+</div>
+<div style="margin-bottom: 1rem;">
+    <h2>Fellow taxonomic brethren</h2>
+    <p>
+        The LCT-01 is not the first system to apply biological taxonomy to non-biological subject matter. The first such
+        organization is the
+        <a href="https://www.horg.com/horg/">
+            Holotypic Occlupanid Research Group
+        </a>
+        , which has amassed a formidable collection of occlupanids, the underappreciated bits of plastic that keep bread
+        bags closed.
+
+        The HORG itself has listed more of all our fellow taxonomic brethren, and even ourselves, on their
+        <a href="https://www.horg.com/horg/?page_id=1187">Research in Synthetic Taxonomy</a>
+        page.
+    </p>
+</div>
