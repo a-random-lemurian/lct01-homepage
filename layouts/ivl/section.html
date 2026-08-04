@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{ range .Pages }}
+  <section>
+      <h2>
+          {{ partial "taxon-title.html" . }}</h2>
+    </section>
+  {{ end }}
+{{ end }}
