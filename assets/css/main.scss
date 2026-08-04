@@ -14,10 +14,30 @@ body {
   max-width: 960px;
 }
 
+.header-nav li {
+  display: inline-block;
+  padding: 0.25rem;
+}
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 200%;
+}
+
 header,
-footer,
 main {
   margin: 1rem;
+
+}
+
+main {
+  ul {
+    margin-left: 2em;
+  }
 }
 
 header {
@@ -27,7 +47,10 @@ header {
 
 footer {
   border-top: 1px solid #222;
-  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 a {
