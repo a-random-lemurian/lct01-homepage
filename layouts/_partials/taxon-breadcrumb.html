@@ -1,0 +1,37 @@
+{{- $url := printf "/ivl/taxa/%s" .slug -}}
+{{- $page := site.GetPage $url -}}
+{{- if $page -}}
+{{- $crumbs := slice $page -}}
+{{- $current := $page -}}
+{{- range seq 20 -}}
+  {{- $parentSlug := $current.Params.taxa.parent -}}
+  {{- if $parentSlug -}}
+    {{- $parentURL := printf "/ivl/taxa/%s" $parentSlug -}}
+    {{- $parentPage := site.GetPage $parentURL -}}
+    {{- if $parentPage -}}
+      {{- if $current.Params.taxa.root -}}
+        {{- break -}}
+      {{- end -}}
+      {{- $crumbs = $crumbs | append $parentPage -}}
+      {{- $current = $parentPage -}}
+    {{- else -}}
+      {{- break -}}
+    {{- end -}}
+  {{- else -}}
+    {{- break -}}
+  {{- end -}}
+{{- end -}}
+{{- $crumbs = $crumbs | collections.Reverse -}}
+{{- $italicRanks := slice "genus" "species" "subspecies" -}}
+{{- range $i, $p := $crumbs -}}
+  {{- if gt $i 0 }} &gt; {{ end -}}
+  {{- $rank := $p.Params.taxa.rank | default "" | lower -}}
+  {{- if in $italicRanks $rank -}}
+    <a href="{{ $p.Permalink }}"><em style="font-style: italic;">{{ $p.Title }}</em></a>
+  {{- else -}}
+    <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+  {{- end -}}
+{{- end -}}
+{{- else -}}
+{{- errorf "shortcode taxon-breadcrumb: page not found: %s" $url -}}
+{{- end -}}

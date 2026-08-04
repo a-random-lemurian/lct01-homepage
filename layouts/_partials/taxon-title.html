@@ -1,0 +1,8 @@
+{{ $italicRanks := slice "genus" "species" "subspecies" }}
+<a href="{{.Permalink}}">
+  {{ if in $italicRanks .Params.taxa.rank }}
+  <i>{{ .Title }}</i>
+  {{ else }}
+  {{ .Title }}
+  {{ end }}
+</a>
