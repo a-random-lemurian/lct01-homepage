@@ -1,7 +1,7 @@
-{{- $url := printf "/ivl/taxa/%s" (.Get 0) -}}
+{{- $url := printf "/ivl/taxa/%s" (.Get 0 | lower) -}}
 {{- $page := site.GetPage $url -}}
 {{- if $page -}}
   <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
 {{- else -}}
-  <span class="broken-link">{{ $url }}</span>
+  <span class="broken-link">{{ (.Get 0) }}</span>
 {{- end -}}
