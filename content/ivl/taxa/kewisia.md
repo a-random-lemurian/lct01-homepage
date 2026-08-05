@@ -1,13 +1,16 @@
 ---
 title: Kewisia
 slug: kewisia
-date: 2026-05-08
+date: 2026-08-06
 taxa:
     id: kewisia
     rank: genus
     parent: kewidae
 ---
 
+***Kewisia*** is a genus of off-shoulder Kew dresses with bilateral single straps. It maps most closely to version 2 of the Kew pattern itself.
+
+## Species
 ### 2026.0005
 As defined in "A taxonomy of Nina Lee's Kew and Kewbello" - lh:L78.1098/lict2026.0005; doi:[10.5281/zenodo.19242200](https://doi.org/10.5281/zenodo.19242200).
 
