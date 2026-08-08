@@ -1,16 +1,34 @@
 {{ define "main" }}
 
-<div>
+<div class="breadcrumbs">
+  <p>
+    <span>
+      <a href="/ivl"><i>Index Vestimentorum Lemurii</i></a> &rightarrow;
+      <a href="/ivl/taxa/">Taxa</a>
+    </span>
+    <br>
+    <span>
+      <b>Hierarchy:</b>
+      <span>
+        {{ partial "taxon-breadcrumb.html" (dict "slug" .Params.taxa.id ) }}
+      </span>
+    </span>
+  </p>
+</div>
+
+<div class="title-area">
   <h1>
     {{ if eq .Params.taxa.rank "genus" }}<i>{{end}}
       {{ .Title }}
-      {{ if eq .Params.taxa.rank "genus" }}</i>{{end}}
+    {{ if eq .Params.taxa.rank "genus" }}</i>{{end}}
   </h1>
+
   {{with .Params.taxa.authority}}
   <span>
     {{.}}
   </span>
-    {{end}}
+  {{end}}
+
 </div>
     
 {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
@@ -22,18 +40,11 @@
     </span>
 </p>
 
-<p>
-    <b>Hierarchy:</b>
-    <span>
-        {{ partial "taxon-breadcrumb.html" (dict "slug" .Params.taxa.id ) }}
-    </span>
-</p>
-
 {{ $children := where .Site.RegularPages "Params.taxa.parent" .Slug }}
 {{ if $children }}
   <h2>Child taxa</h2>
   <ul>
-    {{ range $children }}
+    {{ range (sort $children "Title" "asc") }}
       <li>
         {{ partial "taxon-title.html" .}}
       </li>

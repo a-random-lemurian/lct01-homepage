@@ -3,16 +3,11 @@
     <a href="/ivl"><i>Index Vestimentorum Lemurii</i></a> &rightarrow;
     <b>{{.Title}}</b>
   </span>
-
   <h1>{{ .Title }}</h1>
-
   {{ .Content }}
-
-  <ul>
-    {{ range (sort .Pages "Title" "asc") }}
-      <li>
-        {{ partial "taxon-title.html" .}}
-      </li>
-    {{ end }}
-  </ul>
+  {{ range .Pages }}
+    <section>
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    </section>
+  {{ end }}
 {{ end }}

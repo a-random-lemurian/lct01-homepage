@@ -1,10 +1,14 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-  <section>
-      <h2>
-          {{ partial "taxon-title.html" . }}</h2>
-    </section>
+
+<h1><em>{{ .Title }}</em></h1>
+{{ .Content }}
+
+<ul>
+  {{ range (sort .Pages "Title") }}
+  <li>
+    <a href="{{.Permalink}}">{{.Title}}</a>
+  </li>
   {{ end }}
+</ul>
+
 {{ end }}
