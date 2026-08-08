@@ -6,6 +6,7 @@ data:
     textilia: https://www.textillia.com/companies/nina-lee-patterns
     lct01abbr: Nina
     website: https://www.ninalee.co.uk/
+    instagram: https://instagram.com/ninaleelondon
     
 ---
 
