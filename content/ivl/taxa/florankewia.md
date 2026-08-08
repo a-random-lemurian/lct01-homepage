@@ -11,9 +11,7 @@ taxa:
 
 *Florankewia* is a genus of off-shoulder dresses, created by the sewist Kate Eva, in the family Plesikewidae. *Florankewia* combines components from three patterns; the sleeve from the off-shoulder Kew dress with straps (Kewidae), bodice from *Behelaflora* (By Hand London (BHL) Flora dress), and the skirt from *Behelanna* (BHL Anna dress).
 
-<small>
-**Note**: *Behelanna* has not been taxonomized yet and the BHL Anna dress is subject to future reclassification.
-</small>
+> **Note**: *Behelanna* has not been taxonomized yet and the BHL Anna dress is subject to future reclassification.
 
 So far, two species of *Florankewia* exist. *F. libera*, In early 2019, Anna Bond, the owner of Rifle Paper Co., in the Liberty department store in London (hence the specific epithet *libera*). Bond gifted Eva some fabric from a collection that was to be released later that year, and Eva used this gifted fabric to create *F. libera*. She published [a blog post](https://kateevadesigns.com/2019/05/19/gifted-fabric-rifle-paper-co-anna-flora-kew-hack/) about it in May 2019.
 
