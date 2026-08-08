@@ -1,5 +1,6 @@
 ---
 title: Kew (Nina Lee)
+date: 2026-08-08
 ---
 
 **Kew** is a sewing pattern by [Nina Lee](/ivl/designers/ninalee). It was released on August 18, 2017, and was the first pattern to receive comprehensive taxonomic treatment in the LCT-01, in the form of two monographs in the *Journal*.
