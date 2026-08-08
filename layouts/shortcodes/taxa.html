@@ -1,11 +1,7 @@
 {{- $url := printf "/ivl/taxa/%s" (.Get 0 | lower) -}}
 {{- $page := site.GetPage $url -}}
-{{- if $page -}}
-  <a href="{{ $page.Permalink }}">{{ $page.Title }}</a>
-{{- else -}}
-  <span class="broken-link">{{ (.Get 0) }}</span>
+<span>
+{{- if $page -}}<a href="{{ $page.Permalink }}">{{ $page.Title }}</a>{{- else -}}
+<span class="broken-link">{{ (.Get 0) }}</span>
 {{- end -}}
-&nbsp;
-{{- if (.Get 1) -}}
-  <span class="taxon-describer-authority">{{(.Get 1)}}</span>
-{{ end }}
+{{- if (.Get 1) -}}&nbsp;<span class="taxon-describer-authority">{{(.Get 1)}}</span>{{ end }}</span>
