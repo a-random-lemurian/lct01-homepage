@@ -1,3 +1,6 @@
 baseURL: https://lct01.lemuria.ph/
 languageCode: en-us
 title: First Lemurian Clothing Taxonomy
+security:
+  allowContent: ".*"
+  enableInlineShortcodes: true
