@@ -1,0 +1,5 @@
+list:
+  - {key: instagram, display: Instagram}
+  - {key: textilia, display: Textilia}
+  - {key: threadloop, display: Threadloop}
+  - {key: website, display: Website}

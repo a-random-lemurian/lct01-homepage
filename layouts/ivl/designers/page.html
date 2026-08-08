@@ -1,3 +1,17 @@
+
+
+{{ define "ext-links" }}
+  {{ $dat := .Params.data}}
+  {{range $site := .Site.Data.supported_socials.list}}
+    {{$link := index $dat $site.key}}
+    {{if $link }}
+      <li>
+        <a href="{{$link}}">{{$site.display}}</a>
+      </li>
+    {{end}}
+  {{end}}
+{{ end }}
+
 {{ define "main" }}
 
 <div>
@@ -15,10 +29,24 @@
     </span>
   </p>
 
-
   <h1>
     {{ .Title }}
   </h1>
+
+    {{with .Params.data.lct01abbr}}
+    <span><b>LCT-01 <abbr title="abbreviation">abbr.</abbr></b>: {{.}}
+    </span>
+    {{end}}
+
+    
+    {{$links := partial "ext-links-designer.html" . }}
+    {{if $links }}
+    <br>
+    <b>External links:</b>
+    <ul class="hlist">
+      {{$links}}
+    </ul>
+    {{end}}
 </div>
 
 {{ .Content }}

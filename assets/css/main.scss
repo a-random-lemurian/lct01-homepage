@@ -28,6 +28,11 @@ h1 {
   font-size: 200%;
 }
 
+h2, h3 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
 header,
 main {
   margin: 1rem;
@@ -35,8 +40,22 @@ main {
 }
 
 main {
-  ul {
+  ul:not(.hlist) {
     margin-left: 2em;
+  }
+}
+
+ul.hlist {
+  display: inline-flex;
+  list-style: none;
+  
+  li {
+    padding-left: 3px;
+    padding-right: 3px;
+
+    &:not(:last-child)::after {
+      content: " | ";
+    }
   }
 }
 
@@ -66,6 +85,19 @@ a:visited {
   color: lightgreen;
 }
 
+.taxon-describer-authority {
+  font-size: 90%;
+}
+
 .lct01-footer-copyright {
   font-size: 85%
+}
+
+table {
+  border: 1px solid #525252;
+  padding: 5px;
+  td {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
