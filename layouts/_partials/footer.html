@@ -17,6 +17,9 @@
     </div>
     <p>See also: <a href="https://lemuria.ph/privacy-policy/">privacy policy</a> / <a
             href="https://github.com/a-random-lemurian/lct01-homepage">website source</a></p>
+    <div class="lct01-version-info-footer">
+        This page was last updated on {{.Page.Lastmod | time.Format "2006-01-02"}} ({{with .GitInfo}}git commit {{.Hash}}{{end}}).
+    </div>
 </div>
 <div>
     <a href="https://lemuria.ph">
