@@ -4,3 +4,7 @@ title: First Lemurian Clothing Taxonomy
 security:
   allowContent: ".*"
   enableInlineShortcodes: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
